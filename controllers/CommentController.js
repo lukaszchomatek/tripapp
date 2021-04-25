@@ -1,3 +1,6 @@
+const Place = require('../models/Place')
+const Comment = require('../models/Comment')
+
 exports.getCommentsForPlace = (req, res) => {
     res.sendStatus(500);
 }

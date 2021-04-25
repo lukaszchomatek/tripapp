@@ -10,6 +10,10 @@ exports.getAllPlaces = async (req, res) => {
 }
 
 exports.getPlaceDetailsById = async (req, res) => {
+    res.json(req.body.place)
+}
+
+exports.getPlaceByID = async (req, res, next) => {
     let place;
     try {
         place = await Place.findById(req.params.id);
@@ -23,7 +27,8 @@ exports.getPlaceDetailsById = async (req, res) => {
             message: err.message
         })
     }
-    res.json(place)
+    req.body.place = place;
+    next();
 }
 
 exports.createPlace = async (req, res) => {
@@ -48,19 +53,7 @@ exports.createPlace = async (req, res) => {
 }
 
 exports.updatePlace= async (req, res) => {
-    let place;
-    try {
-        place = await Place.findById(req.params.id);
-        if (place == null) {
-            return res.status(404).json({ 
-                message: "Place not found"
-            })
-        }
-    } catch (err) {
-        return res.status(500).json({
-            message: err.message
-        })
-    }
+    let place = req.body.place
 
     if (req.body.name)
         place.name = req.body.name

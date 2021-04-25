@@ -47,6 +47,6 @@ Content-Type: application/json
     "street":"Żelazowa Wola 15",
     "lat":52.2571,
     "lon":20.3109,
-    "costToVisit":100,
+    "costToVisit":50,
     "timeToVisit":180
 }
