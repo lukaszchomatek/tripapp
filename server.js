@@ -9,6 +9,7 @@ db.on('error', (error) => console.error(error));
 db.once('open', () => console.log('Connected to DB'))
 
 const router = require('./routes/index')
+app.use(express.json())
 app.use('/', router)
 
 app.listen(3000, () => {

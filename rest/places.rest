@@ -1,0 +1,23 @@
+GET http://localhost:3000/places
+
+###
+POST http://localhost:3000/places
+Content-Type: application/json
+
+{
+    "name": "Birthplace of Frédéric Chopin",
+    "description": "The Birthplace of Frédéric Chopin is a \"dworek\" surrounded by a large natural park at the banks of Utrata River in Żelazowa Wola near Sochaczew in Poland – presently museum of the composer, department of the Fryderyk Chopin Museum in Warsaw.",
+    "city": "Żelazowa Wola",
+    "street": "Żelazowa Wola 15",
+    "lat": 52.2571,
+    "lon": 20.3109,
+    "costToVisit": 30,
+    "timeToVisit": 150
+
+}
+
+###
+GET http://localhost:3000/places/608561575e8cf445c84a22fc
+
+###
+GET http://localhost:3000/places/608561576e8cf445c84a22fc
