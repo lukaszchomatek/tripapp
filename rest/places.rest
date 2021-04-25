@@ -17,6 +17,22 @@ Content-Type: application/json
 }
 
 ###
+POST http://localhost:3000/places
+Content-Type: application/json
+
+{
+    "name": "Skansen budownictwa puszczańskiego w Granicy",
+    "description": "Skansen budownictwa puszczańskiego – niewielki skansen (trzy zagrody) we wsi Granica k. Kampinosu.",
+    "city": "Granica",
+    "street": "05-085 Granica",
+    "lat": 52.28802,
+    "lon": 20.448558,
+    "costToVisit": 0,
+    "timeToVisit": 60
+
+}
+
+###
 GET http://localhost:3000/places/608561575e8cf445c84a22fc
 
 ###
