@@ -26,3 +26,15 @@ Content-Type: application/json
     "rate": 4,
     "dateOfVisit": "2021-04-14T13:43:04.621Z"
 }
+
+
+###
+POST http://localhost:3000/comments/6085672c99f1447844dc6569
+Content-Type: application/json
+
+{
+    "title": "Nie podobało mi się",
+    "content": "W parku były śmieci!!!",
+    "rate": 3,
+    "dateOfVisit": "2021-04-21T13:43:04.621Z"
+}
