@@ -38,3 +38,9 @@ Content-Type: application/json
     "rate": 3,
     "dateOfVisit": "2021-04-21T13:43:04.621Z"
 }
+
+###
+DELETE http://localhost:3000/comments/60857251778a447dbcacd68c
+
+###
+DELETE http://localhost:3000/comments/6085728e27f4ad755820246a

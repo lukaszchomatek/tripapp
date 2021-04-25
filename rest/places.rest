@@ -50,3 +50,4 @@ Content-Type: application/json
     "costToVisit":50,
     "timeToVisit":180
 }
+
