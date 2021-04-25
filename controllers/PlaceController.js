@@ -47,6 +47,44 @@ exports.createPlace = async (req, res) => {
 
 }
 
-exports.updatePlace= (req, res) => {
-    res.sendStatus(500);
+exports.updatePlace= async (req, res) => {
+    let place;
+    try {
+        place = await Place.findById(req.params.id);
+        if (place == null) {
+            return res.status(404).json({ 
+                message: "Place not found"
+            })
+        }
+    } catch (err) {
+        return res.status(500).json({
+            message: err.message
+        })
+    }
+
+    if (req.body.name)
+        place.name = req.body.name
+    if (req.body.description)
+        place.description = req.body.description
+    if (req.body.city)
+        place.city = req.body.city
+    if (req.body.street)
+        place.street = req.body.street
+    if (req.body.lat)
+        place.lat = req.body.lat
+    if (req.body.lon)
+        place.lon = req.body.lon
+    if (req.body.costToVisit)
+        place.costToVisit = req.body.costToVisit
+    if (req.body.timeToVisit)
+        place.timeToVisit = req.body.timeToVisit
+    
+    try {
+        const updatedPlace = await place.save()
+        res.json(updatedPlace)
+    } catch (err) {
+        res.status(400).json({
+            message: err.message
+        })
+    }
 }

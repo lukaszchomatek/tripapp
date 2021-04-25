@@ -33,7 +33,20 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:3000/places/608561575e8cf445c84a22fc
+GET http://localhost:3000/places/6085672c99f1447844dc6569
+
 
 ###
-GET http://localhost:3000/places/608561576e8cf445c84a22fc
+PUT http://localhost:3000/places/6085672c99f1447844dc6569
+Content-Type: application/json
+
+{
+    "name":"Dom Urodzenia Fryderyka Chopina",
+    "description":"Dom Urodzenia Fryderyka Chopina – muzeum biograficzne Fryderyka Chopina w Żelazowej Woli, w skład którego wchodzi oficyna (tzw. dworek) oraz 7-hektarowy park krajobrazowy nad rzeką Utratą. Dwór wraz z parkiem jest oddziałem Muzeum Fryderyka Chopina w Warszawie zarządzanego przez Narodowy Instytut Fryderyka Chopina.",
+    "city":"Stalowa Wola",
+    "street":"Żelazowa Wola 15",
+    "lat":52.2571,
+    "lon":20.3109,
+    "costToVisit":100,
+    "timeToVisit":180
+}
