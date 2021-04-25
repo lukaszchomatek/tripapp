@@ -1,6 +1,15 @@
 GET http://localhost:3000/places
 
 ###
+GET http://localhost:3000/places?city=Warszawa
+
+###
+GET http://localhost:3000/places?city=Granica
+
+###
+GET http://localhost:3000/places?name=Urodzenia
+
+###
 POST http://localhost:3000/places
 Content-Type: application/json
 
